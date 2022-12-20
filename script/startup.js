@@ -22,6 +22,10 @@
         // Product 
             const productend = '/products';
 
+// Startup Value 
+    // Check page 
+        let path = window.location.pathname;
+
 
 
 // FUNCTION 
@@ -48,6 +52,14 @@ async function apiRD(value1){
     }
 }
 
+// Check on path
+function checkpath(){
+    if(path === '/index.html'){
+        console.log('-- OnPage --');
+        console.log(path)
+    }
+}
+
 
 // Adding Product to intropage
 
@@ -60,7 +72,5 @@ function bAuth(key, secret) {
 
     let auth = bAuth(apiKey, apiSec);
 
-
-// Startup 
-
 apiRD(productend)
+checkpath()
