@@ -6,9 +6,9 @@
 
     // Loading 
         // Loading Main 
-            const loadingBox = document.querySelector('#loading');
+            const loadingBox = document.querySelector('.loading');
         // Loading TXT 
-            const loadingtxt = document.querySelector('#loadertxt');
+            const loadingtxt = document.querySelector('.loadertxt');
     // Product 
             // Product Section 
                 const productpage = document.querySelector('.productShow')
@@ -126,7 +126,8 @@ function addShowproduct(value1, value2){
 // closing pop Windows
     // Value is the element we need to close
     function closeWindow(value){
-        value.classList.remove('#hidden')
+        console.log(value)
+        value.classList.add('hidden')
     }
 
 // Adding Product to intropage
