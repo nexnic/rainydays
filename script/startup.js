@@ -31,7 +31,8 @@
         let auth = bAuth(apiKey, apiSec);
     // if api is done Default false 
         let callStatus = false;
-
+    // Intererval for check api
+        const startInterval = setInterval(checkapicalled, 4000);
 
 // FUNCTION 
 
@@ -70,7 +71,17 @@ function checkpath(){
 }
 
 // SetInterval for the api call
+// value 
+function checkInterval(value1) {
+    if(value1 === true) {
+        clearInterval(startInterval);
+    }
+}
 
+// Clear Interval 
+function clearinterval(value1){
+    clearInterval(value1)
+}
 
 // Adding Show product to page 
     // value1 is HTML element to fix it
