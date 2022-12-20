@@ -71,7 +71,7 @@ function checkpath(){
 }
 
 // SetInterval for the api call
-// value 
+// value1 is object we are waiting for. 
 function checkInterval(value1) {
     if(value1 === true) {
         clearInterval(startInterval);
@@ -79,6 +79,7 @@ function checkInterval(value1) {
 }
 
 // Clear Interval 
+    // Value1 is the function need to be clear
 function clearinterval(value1){
     clearInterval(value1)
 }
