@@ -27,6 +27,8 @@
 // Startup Value 
     // Check page 
         let path = window.location.pathname;
+    // bauth 
+        let auth = bAuth(apiKey, apiSec);
 
 
 
@@ -109,7 +111,7 @@ function bAuth(key, secret) {
 
 
 
-    let auth = bAuth(apiKey, apiSec);
+
 
 apiRD(productend)
 checkpath()
