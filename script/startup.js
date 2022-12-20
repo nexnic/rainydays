@@ -10,8 +10,14 @@
         // Loading TXT 
             const loadingtxt = document.querySelector('.loadertxt');
     // Product 
-            // Product Section 
-                const productpage = document.querySelector('.productShow')
+        // Product Section 
+            const productpage = document.querySelector('.productShow')
+    // Message  
+        // Message Main
+            const msgBox = document.querySelector('.msg');
+        // Message Content 
+            const msgtxt = document.querySelector('.msg__content--txt');
+    
 // API
     // URL 
         const URL = 'https://frontendkenterik.no/Rainyday-API/wp-json/wc/v3';
@@ -35,7 +41,7 @@
         const startInterval = setInterval(checkInterval, 1000);
 
 // FUNCTION 
-
+closeWindow(msgBox)
 // Start up function
  function startUp(){  
  }
@@ -126,7 +132,6 @@ function addShowproduct(value1, value2){
 // closing pop Windows
     // Value is the element we need to close
     function closeWindow(value){
-        console.log(value)
         value.classList.add('hidden')
     }
 
