@@ -136,6 +136,21 @@ main {
     align-content: center;
 }
 
+#loading {
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    max-width: 400px;
+    min-height: 400px;
+    max-height: 600px;  
+    background: linear-gradient(0deg, rgba(88,140,35,1) 0%, rgba(67,115,45,1) 100%);
+    box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
+    border-radius: 0.2rem;
+}
+
 .productShow {
     display: flex;
     flex-wrap: wrap;
