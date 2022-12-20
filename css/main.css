@@ -151,6 +151,22 @@ main {
     border-radius: 0.2rem;
 }
 
+#loading__content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+#spin {
+    border-top: 5px solid blue;
+    border-radius: 50%;
+    width: 73px;
+    height: 73px;
+    animation: Spinit 2s linear infinite;
+}
+
+
+
 .productShow {
     display: flex;
     flex-wrap: wrap;
@@ -419,6 +435,19 @@ footer {
     color: white;
     
 } 
+
+/*
+    Key
+*/
+
+    @keyframes Spinit {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(365deg);
+        }
+    }
 
 
 /*
