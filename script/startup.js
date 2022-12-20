@@ -41,7 +41,6 @@
         const startInterval = setInterval(checkInterval, 1000);
 
 // FUNCTION 
-closeWindow(msgBox)
 // Start up function
  function startUp(){  
  }
@@ -129,7 +128,13 @@ function addShowproduct(value1, value2){
     });    
 }
 
-// closing pop Windows
+// open pop window
+    // Value is the elemten we are going to open
+    function openWindow(value) {
+        value.classList.remove('hidden');
+    }
+
+// closing pop Window
     // Value is the element we need to close
     function closeWindow(value){
         value.classList.add('hidden')
