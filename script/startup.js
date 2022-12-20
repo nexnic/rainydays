@@ -24,19 +24,20 @@
         // Product 
             const productend = '/products';
 
-// Startup Value 
+// Starting conditions
     // Check page 
         let path = window.location.pathname;
     // bauth 
         let auth = bAuth(apiKey, apiSec);
-
+    // if api is done Default false 
+        let callStatus = false;
 
 
 // FUNCTION 
 
 // Start up function
  function startUp(){
-    checkpath()
+    
  }
 
 // API CALL 
@@ -49,10 +50,12 @@ async function apiRD(value1){
                 Authorization: bAuth(apiKey, apiSec)}
         } )
         const result = await respons.json();
-        addShowproduct(productpage, result)
-        console.log(result);
+        
+
     } catch (error) {   
         console.log(error);
+    }finally {
+        callStatus = true
     }
 }
 
@@ -66,12 +69,15 @@ function checkpath(){
     }
 }
 
+// SetInterval for the api call
+
+
 // Adding Show product to page 
     // value1 is HTML element to fix it
     // Value2 is temp Object 
 function addShowproduct(value1, value2){
     // console.log('-- Addproducts --')
-    console.log(value1);
+    //console.log(value1);
     // console.log(value2)
     let rdObject = value2
     // Am using forEach for adding the products 
