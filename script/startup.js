@@ -32,13 +32,12 @@
     // if api is done Default false 
         let callStatus = false;
     // Intererval for check api
-        const startInterval = setInterval(checkapicalled, 4000);
+        const startInterval = setInterval(checkInterval, 1000);
 
 // FUNCTION 
 
 // Start up function
- function startUp(){
-    
+ function startUp(){  
  }
 
 // API CALL 
@@ -71,16 +70,21 @@ function checkpath(){
 }
 
 // SetInterval for the api call
-// value1 is object we are waiting for. 
-function checkInterval(value1) {
-    if(value1 === true) {
-        clearInterval(startInterval);
+    // value1 is object we are waiting for. 
+function checkInterval() {
+    console.log('-- check --')
+    console.log()
+    if(callStatus === true) {
+        console.log('-- Test 2 --')
+        clearinterval(startInterval);
+        closeWindow(loadingBox);
     }
 }
 
 // Clear Interval 
     // Value1 is the function need to be clear
 function clearinterval(value1){
+    console.log('clear Interval')
     clearInterval(value1)
 }
 
@@ -116,9 +120,14 @@ function addShowproduct(value1, value2){
             </div>
         </div>
        ` 
-    });
-    
+    });    
 }
+
+// closing pop Windows
+    // Value is the element we need to close
+    function closeWindow(value){
+        value.classList.remove('#hidden')
+    }
 
 // Adding Product to intropage
 
@@ -133,3 +142,4 @@ function bAuth(key, secret) {
 
 apiRD(productend)
 checkpath()
+startUp();
