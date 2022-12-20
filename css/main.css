@@ -9,6 +9,20 @@
         --secondary: #18D631;
         --tertiary-one: #18A7D6;
         --tertiary: #19E0DD;
+
+        /*
+            Test color after user test about color
+        */
+        --testprimary: #588C23;
+        --testprimary-light: #90BF2A; 
+        --testprimary-dark: #43732D;
+
+        --testtertiary: #034023;
+        --testtertiart-dark: #012615; 
+
+        --ColorWhite: white;
+        
+        --ColorGray: gray;
     /* 
         Font-size
     */
