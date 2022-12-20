@@ -70,7 +70,8 @@ function checkpath(){
     console.log('-- OnPage --');
     console.log(path);
     if(path === '/index.html'){
-            
+            console.log(path)
+            document.title = 'test'
     }
 }
 
@@ -138,6 +139,7 @@ function addShowproduct(value1, value2){
     // Value is the element we need to close
     function closeWindow(value){
         value.classList.add('hidden')
+        document.title = 'test'
     }
 
 // Adding Product to intropage
