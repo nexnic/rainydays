@@ -75,9 +75,7 @@ function checkpath(){
             apiRD(productend, addShowproduct,productpage)
     }
     if(path === '/product.html'){
-        console.log(path)
-        const id = checkid();
-        apiRD(productend, creatProductpage,productpage, id )
+        apiRD(productend, creatProductpage,productpage);
         
 
     }
@@ -170,11 +168,15 @@ function checkid() {
 // Creat Product Page 
     // Value is object 
     // id of the object 
-function creatProductpage(value1, value2){
-    console.log(value1, value2)
+function creatProductpage(value1 , value2){
+    let rdObject = value2
+    let itemID = checkid()
+    let id = Number(itemID);
+    console.log('-- Checking --')
+    console.log(rdObject)
     // Bug need fix 1.1 think about adding values to variable
-    const index = value1.findIndex((value1) => value1.id === value2);
-
+    const index = rdObject.findIndex((rdObject) => rdObject.id === id);
+    console.log(index)
    
 }
 
