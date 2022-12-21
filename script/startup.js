@@ -46,7 +46,7 @@
  }
 
 // API CALL 
-async function apiRD(value1, value2, value3){
+async function apiRD(value1, value2, value3, value4){
 
     // Test connect if error catch under. 
     try {
@@ -69,7 +69,7 @@ function checkpath(){
     // Check data 
     console.log('-- OnPage --');
     console.log(path);
-    if(path === '/'){
+    if(path === '/' || path === '/index.html'){
             console.log(path)
             document.title = 'test';
             apiRD(productend, addShowproduct,productpage)
@@ -77,7 +77,9 @@ function checkpath(){
     if(path === '/product.html'){
         console.log(path)
         const id = checkid();
-        console.log(id);
+        apiRD(productend, creatProductpage,productpage, id )
+        
+
     }
 }
 
@@ -149,7 +151,8 @@ function addShowproduct(value1, value2){
     }
 
 // Adding Product to intropage
-
+    // Value1 key is open api key 
+    // Value2 Secret is the secret key
 function bAuth(key, secret) {
     let hash = btoa(key + ':' + secret);
     return 'Basic ' + hash;
@@ -166,8 +169,10 @@ function checkid() {
 
 // Creat Product Page 
     // Value is object 
-function creatProductpage(value){
-   const id = checkid
+    // id of the object 
+function creatProductpage(value1, value2){
+    console.log(value1, value2)
+    const index = value1.findIndex((value1) => value1.id === value2);
 
    
 }
