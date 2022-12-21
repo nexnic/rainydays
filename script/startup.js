@@ -46,7 +46,7 @@
  }
 
 // API CALL 
-async function apiRD(value1){
+async function apiRD(value1, value2, value3){
 
     // Test connect if error catch under. 
     try {
@@ -55,7 +55,7 @@ async function apiRD(value1){
                 Authorization: bAuth(apiKey, apiSec)}
         } )
         const result = await respons.json();
-        
+        value2(value3, result)
 
     } catch (error) {   
         console.log(error);
@@ -69,9 +69,10 @@ function checkpath(){
     // Check data 
     console.log('-- OnPage --');
     console.log(path);
-    if(path === '/index.html'){
+    if(path === '/'){
             console.log(path)
-            document.title = 'test'
+            document.title = 'test';
+            apiRD(productend, addShowproduct,productpage)
     }
 }
 
@@ -84,6 +85,7 @@ function checkInterval() {
         console.log('-- Test 2 --')
         clearinterval(startInterval);
         closeWindow(loadingBox);
+        
     }
 }
 
@@ -106,7 +108,7 @@ function addShowproduct(value1, value2){
     rdObject.forEach(rd => {
         console.log(rd.images[0].src)
        value1.innerHTML += `
-        <div class="product" >
+        <div class="product" onclick="location.href='product.html?id=${rd.id}'">
             <div class="product__top">
                 <img src="${rd.images[0].src}" class="img__category" alt="${rd.images.alt}"> 
             </div>
@@ -138,8 +140,7 @@ function addShowproduct(value1, value2){
 // closing pop Window
     // Value is the element we need to close
     function closeWindow(value){
-        value.classList.add('hidden')
-        
+        value.classList.add('hidden');   
     }
 
 // Adding Product to intropage
@@ -156,16 +157,19 @@ function checkid() {
     return id
 }
 
+
 // Creat Product Page 
-function creatProductpage(){
+    // Value is object 
+function creatProductpage(value){
    const id = checkid
-       
+
+   
 }
 
 
 
 
 
-apiRD(productend)
+
 checkpath()
 startUp();
