@@ -46,6 +46,8 @@
         let callStatus = false;
     // Intererval for check api
         const startInterval = setInterval(checkInterval, 1000);
+    // Cart for this site
+        let cartRD = [];
 
 // FUNCTION 
 // Start up function
@@ -194,7 +196,7 @@ function creatProductpage(value1 , value2){
         <h1>
             ${value2[index].name}
         </h1>
-        
+
     `
 }
 
