@@ -165,6 +165,7 @@ function bAuth(key, secret) {
 }
 
 // CheckID 
+    // check the id of the page 
 function checkid() {
     const urlSearch = document.location.search
     const url = new URLSearchParams(urlSearch);
@@ -186,7 +187,15 @@ function creatProductpage(value1 , value2){
     // Need think about make this function
     const index = value2.findIndex((value2) => value2.id === id);
     
-    
+    productIMG.innerHTML += `
+        <img src="${value2[index].images[0].src}" alt="${value2[index].images[0].alt}" />
+    `
+    productSpec.innerHTML += `
+        <h1>
+            ${value2[index].name}
+        </h1>
+        
+    `
 }
 
 // Adding Image on page
