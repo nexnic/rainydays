@@ -139,7 +139,7 @@ function addShowproduct(value1, value2){
     // Value is the element we need to close
     function closeWindow(value){
         value.classList.add('hidden')
-        document.title = 'test'
+        
     }
 
 // Adding Product to intropage
@@ -147,6 +147,19 @@ function addShowproduct(value1, value2){
 function bAuth(key, secret) {
     let hash = btoa(key + ':' + secret);
     return 'Basic ' + hash;
+}
+
+// CheckID 
+function checkid() {
+    const url = new URLSearchParams(urlSearch);
+    let id = url.get('id');
+    return id
+}
+
+// Creat Product Page 
+function creatProductpage(){
+   const id = checkid
+       
 }
 
 
