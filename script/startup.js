@@ -17,6 +17,13 @@
             const msgBox = document.querySelector('.msg');
         // Message Content 
             const msgtxt = document.querySelector('.msg__content--txt');
+    // Product Page
+        // Product Image
+            const productIMG = document.querySelector('.product--image');
+        // Product Spec
+            const productSpec = document.querySelector('product--spec');
+        // Product Description
+            const productDes = document.querySelector('.product--description');
     
 // API
     // URL 
@@ -173,7 +180,9 @@ function creatProductpage(value1 , value2){
     let id = Number(itemID);
     const index = value2.findIndex((value2) => value2.id === id);
     
-    
+    value2.forEach(rd => {
+        
+    })
     
 }
 
