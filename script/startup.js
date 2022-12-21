@@ -111,6 +111,7 @@ function clearinterval(value1){
 // Adding Show product to page 
     // value1 is HTML element to fix it
     // Value2 is temp Object 
+        // After fix need filter for the product. 
 function addShowproduct(value1, value2){
     // console.log('-- Addproducts --')
     //console.log(value1);
@@ -174,18 +175,25 @@ function checkid() {
 
 // Creat Product Page 
     // Value1 is the element need to use 
+        // New fix need Multibu element 
     // Value2 is the object from api function
 function creatProductpage(value1 , value2){
     let itemID = checkid()
     let id = Number(itemID);
     const index = value2.findIndex((value2) => value2.id === id);
     
-    value2.forEach(rd => {
-        
-    })
-    
 }
 
+// Adding Image on page
+    // Value1 id to image
+    // value2 object
+    // value3 Need element
+function addImage(value1, value2, value3){
+    const index = value2.findIndex((value2) => value2.id === value1);
+    value3.innerHTML += `
+        <img src="${value2[index].images[0].src}" alt="${value2[index].image[0].alt}" class="" />
+    `
+};
 
 
 
