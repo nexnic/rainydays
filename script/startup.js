@@ -166,18 +166,15 @@ function checkid() {
 
 
 // Creat Product Page 
-    // Value is object 
-    // id of the object 
+    // Value1 is the element need to use 
+    // Value2 is the object from api function
 function creatProductpage(value1 , value2){
-    let rdObject = value2
     let itemID = checkid()
     let id = Number(itemID);
-    console.log('-- Checking --')
-    console.log(rdObject)
-    // Bug need fix 1.1 think about adding values to variable
-    const index = rdObject.findIndex((rdObject) => rdObject.id === id);
-    console.log(index)
-   
+    const index = value2.findIndex((value2) => value2.id === id);
+    
+    
+    
 }
 
 
