@@ -74,6 +74,11 @@ function checkpath(){
             document.title = 'test';
             apiRD(productend, addShowproduct,productpage)
     }
+    if(path === '/product.html'){
+        console.log(path)
+        const id = checkid();
+        console.log(id);
+    }
 }
 
 // SetInterval for the api call
@@ -152,6 +157,7 @@ function bAuth(key, secret) {
 
 // CheckID 
 function checkid() {
+    const urlSearch = document.location.search
     const url = new URLSearchParams(urlSearch);
     let id = url.get('id');
     return id
