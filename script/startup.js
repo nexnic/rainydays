@@ -55,6 +55,10 @@
  }
 
 // API CALL 
+// value1 is End Point of the api url
+// value2 is new function 
+// value3 is element 
+// value4 is the ID 
 async function apiRD(value1, value2, value3, value4){
 
     // Test connect if error catch under. 
@@ -64,7 +68,7 @@ async function apiRD(value1, value2, value3, value4){
                 Authorization: bAuth(apiKey, apiSec)}
         } )
         const result = await respons.json();
-        value2(value3, result)
+        value2(value3, result, value2)
 
     } catch (error) {   
         console.log(error);
@@ -198,6 +202,22 @@ function creatProductpage(value1 , value2){
         </h1>
 
     `
+}
+
+// Function buy button
+    // id
+function buybtn(value1){
+    apiRD(productend, cartRD, cart, value1);
+}
+
+
+// function Cart
+    // Value1 is id for the product
+function cartRD(value1) {
+    // Find index of 
+    const index = value1.findIndex((value1) => value1.id === id);
+
+
 }
 
 // Adding Image on page
