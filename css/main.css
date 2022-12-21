@@ -235,6 +235,32 @@ main {
     max-width: fit-content;
 }
 
+.productpage{
+    display: grid;
+    grid-template: 
+    "ppimage ppimage ppspec"
+    "ppdesc ppdesc ppdesc";
+    min-width: 75%;
+    max-width: 100%;
+    padding: 2rem;
+}
+
+.productpage--image {
+    grid-area: ppimage;
+    max-width: 75%;
+
+}
+
+.productpage--spec {
+    grid-area: ppspec;
+    max-width: 25%;
+}
+
+.prodcutpage--description{
+    grid-area: ppdesc;
+    max-width: 100%;
+}
+
 .contact {
     display: flex;
     flex-direction: row;
