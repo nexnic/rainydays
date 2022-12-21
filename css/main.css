@@ -540,12 +540,12 @@ footer {
 
 @keyframes msgBox {
     0%{
-        transform: translateY(-5rem);
+        transform: translate(-50%, -10rem);
         
     }
 
     100%{
-        transform: translate(0);
+        transform: translate(-50% 0);
         
     }
     
