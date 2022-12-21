@@ -19,11 +19,11 @@
             const msgtxt = document.querySelector('.msg__content--txt');
     // Product Page
         // Product Image
-            const productIMG = document.querySelector('.product--image');
+            const productIMG = document.querySelector('.productpage--image');
         // Product Spec
-            const productSpec = document.querySelector('product--spec');
+            const productSpec = document.querySelector('productpage--spec');
         // Product Description
-            const productDes = document.querySelector('.product--description');
+            const productDes = document.querySelector('.productpage--description');
     
 // API
     // URL 
@@ -178,9 +178,14 @@ function checkid() {
         // New fix need Multibu element 
     // Value2 is the object from api function
 function creatProductpage(value1 , value2){
+    // Element1 == productIMG
+    // Element2 == productSpec
+    // Element3 == productDes
     let itemID = checkid()
     let id = Number(itemID);
+    // Need think about make this function
     const index = value2.findIndex((value2) => value2.id === id);
+    
     
 }
 
@@ -188,7 +193,8 @@ function creatProductpage(value1 , value2){
     // Value1 id to image
     // value2 object
     // value3 Need element
-function addImage(value1, value2, value3){
+    // Value4 is Class 
+function addImage(value1, value2, value3, value4){
     const index = value2.findIndex((value2) => value2.id === value1);
     value3.innerHTML += `
         <img src="${value2[index].images[0].src}" alt="${value2[index].image[0].alt}" class="" />
