@@ -172,6 +172,7 @@ function checkid() {
     // id of the object 
 function creatProductpage(value1, value2){
     console.log(value1, value2)
+    // Bug need fix 1.1 think about adding values to variable
     const index = value1.findIndex((value1) => value1.id === value2);
 
    
