@@ -1,6 +1,10 @@
 // use strice mode on 
     'use strict';
 
+// icon 
+    // box-open
+        const iconopen = '<i class="fa-solid fa-box-open"></i>'
+
 // DOM TREE 
     // Header 
 
@@ -192,7 +196,7 @@ function creatProductpage(value1 , value2){
     let id = Number(itemID);
     // Need think about make this function
     const index = value2.findIndex((value2) => value2.id === id);
-    
+    /*
     productIMG.innerHTML += `
         <img src="${value2[index].images[0].src}" alt="${value2[index].images[0].alt}" />
     `
@@ -202,6 +206,7 @@ function creatProductpage(value1 , value2){
         </h1>
 
     `
+    */
 }
 
 // Function buy button
@@ -213,10 +218,10 @@ function buybtn(value1){
 
 // function Cart
     // Value1 is id for the product
-function cartRD(value1) {
+function cart(value1) {
     // Find index of 
     const index = value1.findIndex((value1) => value1.id === id);
-
+    
 
 }
 
