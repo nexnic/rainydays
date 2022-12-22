@@ -237,28 +237,23 @@ main {
 
 .productpage{
     display: grid;
-    grid-template: 
-    "ppimage ppimage ppspec"
-    "ppdesc ppdesc ppdesc";
-    min-width: 75%;
-    max-width: 100%;
-    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
 .productpage--image {
-    grid-area: ppimage;
-    max-width: 75%;
+    grid-area: 1 / 1 / 2 / 2;
 
 }
 
 .productpage--spec {
-    grid-area: ppspec;
-    max-width: 25%;
+    grid-area: 1 / 2 / 2 / 4;
 }
 
 .prodcutpage--description{
-    grid-area: ppdesc;
-    max-width: 100%;
+    grid-area: 2 / 1 / 3 / 4;
 }
 
 .contact {
@@ -351,11 +346,17 @@ footer {
     font-size: 1.2;
     font-weight: bold;
     text-decoration: none;
-    color: white;
-    padding: 1rem 1.8rem;
+    color: var(--testtertiart-dark);
+    padding: 0.5em 1em;
     background-color: white;
-    border: solid gray 0.1rem;
+    border: solid var(--testtertiart-dark) 0.1rem;
     border-radius: 1.6rem;
+}
+
+.btn--white:hover {
+    color: white;
+    transform: scale(1.6);
+    background-color: #012615;
 }
 
 .btn:hover {
@@ -393,6 +394,10 @@ footer {
 .hero__img{
     max-width: 35%;
     min-width: 25%;
+}
+
+.img--productpage {
+    max-width: 70%;
 }
 
 .logo_small {
