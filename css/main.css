@@ -347,6 +347,17 @@ footer {
     border-radius: 1.6rem;
 }
 
+.btn--white {
+    font-size: 1.2;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 1rem 1.8rem;
+    background-color: white;
+    border: solid gray 0.1rem;
+    border-radius: 1.6rem;
+}
+
 .btn:hover {
     background-color: var(--secondary);
 }
