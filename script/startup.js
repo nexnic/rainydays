@@ -28,6 +28,15 @@
             const productSpec = document.querySelector('productpage--spec');
         // Product Description
             const productDes = document.querySelector('.productpage--description');
+    // Cart 
+        // Cart main 
+            const cart = document.querySelector('#cart');
+        // Cart Left 
+            const cartLeft = document.querySelector('#cart__left');
+        // Cart Right 
+            const cartright = document.querySelector('#cart__right');
+        // Show Cart 
+            const CartD = document.querySelector('.showcart');
     
 // API
     // URL 
@@ -215,16 +224,6 @@ function buybtn(value1){
     apiRD(productend, cartRD, cart, value1);
 }
 
-
-// function Cart
-    // Value1 is id for the product
-function cart(value1) {
-    // Find index of 
-    const index = value1.findIndex((value1) => value1.id === id);
-    
-
-}
-
 // Adding Image on page
     // Value1 id to image
     // value2 object
@@ -238,7 +237,22 @@ function addImage(value1, value2, value3, value4){
 };
 
 
-
+function showCart(){
+    console.log('hello');
+    CartD.classList.toggle('hidden');
+    CartD.classList.toggle('active');
+    console.log(cartValue);
+    for(c=0; c = cartValue.length; c++){
+        CartD.innerHTML += `
+            <ul>
+                <li>
+                    ${cartValue[c]}
+                </li>
+            </ul>
+        `
+    }
+}
+productShow();
 
 
 checkpath()
