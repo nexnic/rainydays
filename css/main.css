@@ -162,16 +162,16 @@ main {
 .loading {
     display: block;
     position: absolute;
-    top: 25%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
     min-width: 400px;
     max-width: 400px;
     min-height: 400px;
     max-height: 600px;  
     background-color: var(--testprimary-light);
     box-shadow: 10px 10px 19px 0px rgba(0,0,0,0.75);
-    border: 2px solid --testtertiart-dark;
+    border: .8rem solid --testtertiart-dark;
     border-radius: 0.2rem;
 }
 
@@ -193,7 +193,7 @@ main {
 }
 
 .spin {
-    border-top: 5px solid #9DF2AB;
+    border-top: 5px solid var(--testtertiart-dark);
     border-radius: 50%;
     width: 73px;
     height: 73px;
@@ -350,12 +350,11 @@ footer {
     padding: 0.5em 1em;
     background-color: white;
     border: solid var(--testtertiart-dark) 0.1rem;
-    border-radius: 1.6rem;
+    border-radius: 0.3rem;
 }
 
 .btn--white:hover {
     color: white;
-    transform: scale(1.6);
     background-color: #012615;
 }
 
