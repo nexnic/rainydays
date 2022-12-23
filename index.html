@@ -59,22 +59,62 @@
                         <a href="./contact.html" class="btn__nav">contact</a>
                     </li>
                     <li>
-                        <div id="Cart-icon" onclick="">
+                            <input type="checkbox" id="toggle-checkbox">
+                            <label for="toggle-checkbox" class="toggle-label">Menu</label>
+                            <ul class="menu">
+                            <li>
+                                <a href="/news">News</a>
+                            </li>
+                            <li>
+                                <a href="/about">About</a>
+                            </li>
+                            <li>
+                                <a href="/contact">Contact</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="toogle-checkbox">
+                        <label for="toogle-checkbox" class="toogle-label">
                             <i class="fa-solid fa-cart-shopping"></i>
-                            <div class="cart">
-                                <div cart--item>
-                                    <img src="./assets/img/RainyDays_Jacket1.jpg" alt="" class="img--item">
-                                    <p> Name of item</p>
-                                    <p>price</p>
-                                    <p>antall</p>
-                                    <label for="remove">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </label>
-                                    <button id="remove"></button>                              
+                        </label>
+                        <ul class="cart">
+                            <li>
+                                <div class="cart-top">
+                                    <h4>Cart</h4>
                                 </div>
-                            </div>
-                        </div>
-                        
+                                <div class="cart--content">
+                                    
+                                    <div id="cart--item">
+                                        <div id="cart--img">
+                                            <img src="./assets/img/RainyDays_Jacket1.jpg" alt="" class="img--item">
+                                        </div>
+                                        <div id="cart--txt">
+                                            <h5 class="cart__product">Product name</h5>
+                                            <p class="cart__description">descipton</p>
+                                            <p class="cart--pric">Kr 1500,-</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div id="cart--item">
+                                        <div id="cart--img">
+                                            <img src="./assets/img/RainyDays_Jacket1.jpg" alt="" class="img--item">
+                                        </div>
+                                        <div id="cart--txt">
+                                            <h5 class="cart__product">Product name</h5>
+                                            <p class="cart__description">descipton</p>
+                                            <p class="cart--pric">Kr 1500,-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div clas="cart-bot">
+                                    <hr>
+                                    <input type="checkbox" id="empty--cart">
+                                    <label for="empty--cart">Empty Cart</label>
+                                    <p class="price__point"></p>
+                                </div>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 

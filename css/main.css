@@ -43,6 +43,10 @@ body {
     
 }
 
+ul {
+    list-style: none;
+}
+
 header {
     grid: 'header';
     background-color: var(--primary);
@@ -72,21 +76,9 @@ header {
     gap: 2rem;
 }
 
-#cart {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    pointer-events: visible;
-}
 
-.showcart {
-    display: block;
-    position:fixed; 
-    max-width: 4rem;
-    max-height: 4rem;
-}
+
+
 
 
 
@@ -177,6 +169,15 @@ main {
 
 #hidden{
     display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    
+    visibility: visible;
 }
 
 .loading__content {
@@ -407,6 +408,9 @@ footer {
     max-height: 10rem;
 }
 
+.img--item {
+    max-width: 5em;
+}
 /*
     ICON
 */
@@ -551,6 +555,89 @@ footer {
     color: lightgray;
 }
 
+/*  
+    CART 
+*/
+
+.cart {
+    display: none;
+    background-color: gray;
+    position:absolute;
+    border-radius: 0.3rem;
+    min-width: 20em;
+    box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.75);
+}
+
+.cart-top {
+    text-align: center;
+}
+
+.cart--content {
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    max-height: 8em;
+    overflow-y: scroll;
+}
+
+#toogle-checkbox:checked ~ .cart {
+    display: block;
+    
+}
+
+#toogle-checkbox {
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    left:0;
+    top:0;
+    width: 0;
+}
+
+
+
+#cart--item {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    max-width: 90%;
+    border-radius: .7rem;
+
+}
+
+#cart--img {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+#cart--txt {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.cart__product {
+    font-size: 1.2rem;
+    font-weight: blod;
+    margin: 0;
+}
+
+.cart__description {
+    font-weight: blod;
+    color: gray;
+    margin: 0;
+}
+
+.cart--pric {
+    color: var(--secondary);
+    font-weight: blod;
+
+}
+
+
+
 /*
     Media Screen 
 */
@@ -590,4 +677,12 @@ footer {
         
     }
     
+}
+
+/*
+    Icons
+*/
+
+.fa-solid {
+    font-size: 2rem;
 }
