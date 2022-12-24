@@ -29,15 +29,10 @@
         // Product Description
             const productDes = document.querySelector('.productpage--description');
     // Cart 
-        // Cart main 
-            const cart = document.querySelector('#cart');
-        // Cart Left 
-            const cartLeft = document.querySelector('#cart__left');
-        // Cart Right 
-            const cartright = document.querySelector('#cart__right');
-        // Show Cart 
-            const CartD = document.querySelector('.showcart');
-    
+        // Cart menu 
+            const cartMenu = document.querySelector('.cart--menu');
+        // Cart content 
+            const cartContect = document.querySelector('.cart--content')
 // API
     // URL 
         const URL = 'https://frontendkenterik.no/Rainyday-API/wp-json/wc/v3';
@@ -60,7 +55,7 @@
     // Intererval for check api
         const startInterval = setInterval(checkInterval, 1000);
     // Cart for this site
-        let cartRD = [];
+        let cartItem = [];
 
 // FUNCTION 
 // Start up function
@@ -156,7 +151,7 @@ function addShowproduct(value1, value2){
                 <p class="">
                     Kr ${rd.price} ,-
                 </p>
-                <button class="btn" id="${rd.id}">Buy</button>
+                <button class="btn" id="${rd.id}" onclick="buybtn(${rd.id})">Buy</button>
             </div>
         </div>
        ` 
@@ -219,9 +214,11 @@ function creatProductpage(value1 , value2){
 }
 
 // Function buy button
-    // id
+    // id 
 function buybtn(value1){
-    apiRD(productend, cartRD, cart, value1);
+    console.log('Buy button click');
+    console.log(value1)
+    // apiRD(productend, addtocart, cartContect, value1);
 }
 
 // Adding Image on page
@@ -236,24 +233,13 @@ function addImage(value1, value2, value3, value4){
     `
 };
 
-
-function showCart(){
-    console.log('hello');
-    CartD.classList.toggle('hidden');
-    CartD.classList.toggle('active');
-    console.log(cartValue);
-    for(c=0; c = cartValue.length; c++){
-        CartD.innerHTML += `
-            <ul>
-                <li>
-                    ${cartValue[c]}
-                </li>
-            </ul>
-        `
-    }
+function addtocart(value1, value2, value3){
+    const index = value2.findIndex((value2) => value2.id === value1)
+    console.log('Add to Cart');
+    console.log(value1, value2, value3)
 }
-productShow();
 
 
-checkpath()
+
+checkpath();
 startUp();
