@@ -55,7 +55,7 @@
     // Intererval for check api
         const startInterval = setInterval(checkInterval, 1000);
     // Cart for this site
-        let cartItem = [];
+        let cartItem = []
 
 // FUNCTION 
 // Start up function
@@ -76,7 +76,7 @@ async function apiRD(value1, value2, value3, value4){
                 Authorization: bAuth(apiKey, apiSec)}
         } )
         const result = await respons.json();
-        value2(value3, result, value2)
+        value2(value3, result, value2, value4)
 
     } catch (error) {   
         console.log(error);
@@ -135,7 +135,7 @@ function addShowproduct(value1, value2){
     rdObject.forEach(rd => {
         console.log(rd.images[0].src)
        value1.innerHTML += `
-        <div class="product" onclick="location.href='product.html?id=${rd.id}'">
+        <div class="product" name="Product" onclick="handleRequestClick(event)">
             <div class="product__top">
                 <img src="${rd.images[0].src}" class="img__category" alt="${rd.images.alt}"> 
             </div>
@@ -151,7 +151,7 @@ function addShowproduct(value1, value2){
                 <p class="">
                     Kr ${rd.price} ,-
                 </p>
-                <button class="btn" id="${rd.id}" onclick="buybtn(${rd.id})">Buy</button>
+                <button class="btn" id="${rd.id}"  name="buy" onclick="handleRequestClick(event, ${rd.id})">Buy</button>
             </div>
         </div>
        ` 
@@ -218,7 +218,7 @@ function creatProductpage(value1 , value2){
 function buybtn(value1){
     console.log('Buy button click');
     console.log(value1)
-    // apiRD(productend, addtocart, cartContect, value1);
+    apiRD(productend, addtocart, cartContect, value1);
 }
 
 // Adding Image on page
@@ -232,14 +232,29 @@ function addImage(value1, value2, value3, value4){
         <img src="${value2[index].images[0].src}" alt="${value2[index].image[0].alt}" class="" />
     `
 };
-
-function addtocart(value1, value2, value3){
-    const index = value2.findIndex((value2) => value2.id === value1)
-    console.log('Add to Cart');
-    console.log(value1, value2, value3)
+// AddtoCart is adding to object
+    // value1 is element
+    // value2 is the object
+function addtocart(value1, value2, value3, value4){
+    const index = value2.findIndex((value2) => value2.id === value4)
+    Object.assign(cartItem, {id: `${value2[index].id}`, name:`${value2[index].name}`, img:`${value2[index].images[0].src}`, description:`${value2[index].description}`, price:`${value2[index].price}`} );
+    
+    console.log(cartItem)
 }
-
-
+// Event click 
+    // value1 e 
+    // value1 id from button
+const handleRequestClick = (e, value1) => {
+    e.stopPropagation()
+    if(e.target.name === 'buy') {
+        buybtn(value1);
+        
+    }
+    if(e.target.name === 'Product') {
+        console.log('click product');
+    }
+   
+} 
 
 checkpath();
 startUp();

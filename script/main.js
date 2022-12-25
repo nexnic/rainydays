@@ -7,11 +7,11 @@
         // cart 
             const cart = document.querySelector('#cart');
             // 
-                const cartLeft = document.querySelector('#cart__left')
+                const cartLeft = document.querySelector('#cart__left');
 
                 const cartright = document.querySelector('#cart__right');
 
-                const CartD = document.querySelector('.showcart')
+                const CartD = document.querySelector('.showcart');
         
         // Product Div 
             const productSection = document.querySelector(".productShow");
